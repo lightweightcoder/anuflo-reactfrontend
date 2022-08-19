@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
+domain = "https://nus-dev-ops-aug-2022-backend.herokuapp.com"
 
 function App() {
   const [custId, setCustId] = useState('');
@@ -11,8 +12,11 @@ function App() {
     var requestOptions = {
       method: "GET",
     };
-    //var url = "http://localhost:3000/customer/id?cid=" + custId;
-    var url = "https://nus-backend.herokuapp.com/customer/id?cid=" + custId;
+    
+    var url = `${domain}/customer/id?cid=` + custId;
+    // var url = "http://testing:3000/customer/id?cid=" + custId;
+    // var url = "http://localhost:3000/customer/id?cid=" + custId;
+    // var url = "https://nus-backend.herokuapp.com/customer/id?cid=" + custId;
     console.log(url); 
     fetch(url, requestOptions)
       .then((response) => response.json())
@@ -24,8 +28,11 @@ function App() {
     var requestOptions = {
       method: "GET",
     };
-    //var url = "http://localhost:3000/customer/all";
-    var url = "https://nus-backend.herokuapp.com/customer/all";
+
+    var url = `${domain}/customer/all`;
+    // var url = "http://testing:3000/customer/all";
+    // var url = "http://localhost:3000/customer/all";
+    // var url = "https://nus-backend.herokuapp.com/customer/all";
     
     console.log(url);
     fetch(url, requestOptions)
