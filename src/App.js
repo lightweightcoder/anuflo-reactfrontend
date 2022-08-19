@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
-domain = "https://nus-dev-ops-aug-2022-backend.herokuapp.com"
+var domain = "https://nus-dev-ops-aug-2022-backend.herokuapp.com"
 
 function App() {
   const [custId, setCustId] = useState('');
@@ -17,7 +17,7 @@ function App() {
     // var url = "http://testing:3000/customer/id?cid=" + custId;
     // var url = "http://localhost:3000/customer/id?cid=" + custId;
     // var url = "https://nus-backend.herokuapp.com/customer/id?cid=" + custId;
-    
+
     console.log(url); 
     fetch(url, requestOptions)
       .then((response) => response.json())
